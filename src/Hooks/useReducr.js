@@ -1,5 +1,18 @@
 import React, { useState } from 'react'
+import { useReducer } from 'react';
 
+const reducer = (allStates, action) =>{
+  switch(action.type){
+    case 'increment':
+            return {...allStates, count: allStates.count + 1};
+          case 'decrement':
+            return {...allStates, count: allStates.count - 1};
+          case'toggleShowText':
+            return {...allStates, showText:!allStates.showText};
+          default:
+            return allStates;
+  }
+}
 function useReducr() {
 
   const [allStates, dispatch] = useReducer(reducer, {count: 0 , showText: true});
