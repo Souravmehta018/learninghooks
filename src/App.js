@@ -1,8 +1,6 @@
 //import logo from './logo.svg';
 import { useState } from 'react';
-//import './App.css';
-import useReducr from './useReducr';
-import { Navigate } from "react-router-dom";
+import './App.css';
 
 function App() {
 
@@ -13,9 +11,6 @@ function App() {
   const [counter,setCounter] = useState(0);
   let Click = () =>{
     setCounter(counter+1);
-  }
-  let reducer = () =>{
-    <Navigate to= "/useReducr"/>
   }
   return (
     <div className="App">
