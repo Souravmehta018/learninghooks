@@ -11,7 +11,7 @@ function App() {
   }
   useEffect(() => {
     console.log("the API was successfully called")
-  }, [counter])
+  }, [counter])             // the API was successfully called only when the counter array changes.
 
   return(
     <div>
