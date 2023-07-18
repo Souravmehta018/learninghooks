@@ -1,6 +1,8 @@
 //import logo from './logo.svg';
 import { useState } from 'react';
-import './App.css';
+//import './App.css';
+import useReducr from './useReducr';
+import { Navigate } from "react-router-dom";
 
 function App() {
 
@@ -12,16 +14,21 @@ function App() {
   let Click = () =>{
     setCounter(counter+1);
   }
+  let reducer = () =>{
+    <Navigate to= "/useReducr"/>
+  }
   return (
     <div className="App">
       <h1> Learning Use States </h1>
       <input type="text" onChange= {Change}></input>
         {inputVal}
-        <br></br>
+        <br/>
+        <br/>        
       {counter}
       <button onClick={Click}> counters</button>
     </div>
-  );
+    
+  )
 }
 
 export default App;
